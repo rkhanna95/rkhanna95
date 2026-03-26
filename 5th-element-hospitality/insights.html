@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights & Articles | 5th Element Hospitality</title>
+    <meta name="description" content="Thought leadership on restaurant operations, menu engineering, talent management, and profitability. Strategic insights from industry veteran Ajay Khanna.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#1a1a1a',
+                        gold: '#c5a059',
+                        darker: '#111111',
+                        light: '#f5f5f5'
+                    },
+                    fontFamily: {
+                        playfair:,
+                        montserrat: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+        }
+        
+        /* Smooth Scroll Reveal Mechanics */
+       .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.5, 0, 0, 1);
+        }
+       .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+       .delay-100 { transition-delay: 100ms; }
+       .delay-200 { transition-delay: 200ms; }
+       .delay-300 { transition-delay: 300ms; }
+       .delay-400 { transition-delay: 400ms; }
+
+        /* Blog Card Micro-Interactions */
+       .blog-card {
+            transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+        }
+       .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            border-color: #c5a059;
+        }
+
+        /* Minimalist Form UI states */
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #c5a059;
+            box-shadow: 0 1px 0 0 #c5a059;
+        }
+    </style>
+</head>
+<body class="font-montserrat antialiased selection:bg-gold selection:text-charcoal flex flex-col min-h-screen">
+
+    <nav class="fixed w-full z-50 top-0 bg-charcoal/95 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex justify-between items-center">
+            <a href="index.html" class="text-gold font-playfair text-2xl font-bold tracking-wider hover:opacity-80 transition-opacity duration-300">5EH.</a>
+            <div class="hidden md:flex space-x-10 text-xs font-medium tracking-widest uppercase text-light/70">
+                <a href="index.html#elements" class="hover:text-gold transition-colors duration-300">The Elements</a>
+                <a href="index.html#founder" class="hover:text-gold transition-colors duration-300">Legacy</a>
+                <a href="index.html#inquiry" class="hover:text-gold transition-colors duration-300">Consultation</a>
+                <a href="elements.html" class="hover:text-gold transition-colors duration-300">Elements</a>
+                <a href="testimonials.html" class="hover:text-gold transition-colors duration-300">Testimonials</a>
+                <a href="insights.html" class="text-gold transition-colors duration-300">Insights</a>
+            </div>
+            <button class="md:hidden text-gold focus:outline-none" aria-label="Toggle Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <header class="relative flex items-center justify-center min-h-[60vh] pt-32 pb-16 px-6 overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto text-center reveal">
+            <h2 class="text-gold uppercase tracking-[0.25em] text-xs md:text-sm font-semibold mb-6">Thought Leadership</h2>
+            <h1 class="font-playfair text-5xl md:text-7xl font-bold leading-tight mb-8 text-white">Insights & Strategic Perspectives</h1>
+            <p class="text-base md:text-lg text-light/70 font-light leading-relaxed max-w-2xl mx-auto">
+                Deep analytical frameworks on restaurant operations, profitability mechanics, talent architecture, and the future of luxury hospitality.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-24 md:py-32 bg-darker px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Blog Post 1 -->
+                <a href="https://blog.5eh.co/menu-engineering-matrix" target="_blank" rel="noopener noreferrer" class="block">
+                    <div class="blog-card reveal bg-charcoal border border-white/5 rounded-sm overflow-hidden h-full flex flex-col hover:border-gold transition-all duration-300">
+                        <div class="bg-darker h-40 flex items-center justify-center border-b border-white/5">
+                            <div class="text-gold font-playfair text-5xl opacity-30">📊</div>
+                        </div>
+                        <div class="p-8 flex flex-col justify-between flex-grow">
+                            <div>
+                                <p class="text-gold text-xs uppercase tracking-widest font-semibold mb-3">Menu Engineering</p>
+                                <h3 class="text-xl font-playfair text-white mb-4 leading-tight">The Menu Engineering Matrix: Transforming Your Profit Engine</h3>
+                                <p class="text-light/60 font-light text-sm leading-relaxed mb-6">
+                                    Discover how to categorize menu items as Stars, Plowhorses, Puzzles, and Dogs. Learn the algorithmic approach to optimizing your menu for both culinary excellence and maximum profitability.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/10 pt-4">
+                                <p class="text-[10px] uppercase tracking-widest text-gold">March 18, 2026 • 8 min read</p>
+                                <p class="text-xs text-light/50 mt-2">By Ajay Khanna</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Blog Post 2 -->
+                <a href="https://blog.5eh.co/prime-cost-controls" target="_blank" rel="noopener noreferrer" class="block">
+                    <div class="blog-card reveal delay-100 bg-charcoal border border-white/5 rounded-sm overflow-hidden h-full flex flex-col hover:border-gold transition-all duration-300">
+                        <div class="bg-darker h-40 flex items-center justify-center border-b border-white/5">
+                            <div class="text-gold font-playfair text-5xl opacity-30">💰</div>
+                        </div>
+                        <div class="p-8 flex flex-col justify-between flex-grow">
+                            <div>
+                                <p class="text-gold text-xs uppercase tracking-widest font-semibold mb-3">Profitability</p>
+                                <h3 class="text-xl font-playfair text-white mb-4 leading-tight">Prime Cost Controls: The Foundation of Margin Defense</h3>
+                                <p class="text-light/60 font-light text-sm leading-relaxed mb-6">
+                                    COGS plus labor equals the true measure of operational health. Explore rigorous Prime Cost management systems that protect profitability without compromising guest experience or quality.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/10 pt-4">
+                                <p class="text-[10px] uppercase tracking-widest text-gold">March 12, 2026 • 10 min read</p>
+                                <p class="text-xs text-light/50 mt-2">By Ajay Khanna</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Blog Post 3 -->
+                <a href="https://blog.5eh.co/talent-retention-framework" target="_blank" rel="noopener noreferrer" class="block">
+                    <div class="blog-card reveal delay-200 bg-charcoal border border-white/5 rounded-sm overflow-hidden h-full flex flex-col hover:border-gold transition-all duration-300">
+                        <div class="bg-darker h-40 flex items-center justify-center border-b border-white/5">
+                            <div class="text-gold font-playfair text-5xl opacity-30">👥</div>
+                        </div>
+                        <div class="p-8 flex flex-col justify-between flex-grow">
+                            <div>
+                                <p class="text-gold text-xs uppercase tracking-widest font-semibold mb-3">Talent Architecture</p>
+                                <h3 class="text-xl font-playfair text-white mb-4 leading-tight">Beyond High Turnover: Building Invested Brand Ambassadors</h3>
+                                <p class="text-light/60 font-light text-sm leading-relaxed mb-6">
+                                    Hospitality's bleeding margin isn't kitchen waste—it's staff turnover. Learn our five-pillar framework for transforming transient workers into emotionally invested brand stewards.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/10 pt-4">
+                                <p class="text-[10px] uppercase tracking-widest text-gold">March 5, 2026 • 12 min read</p>
+                                <p class="text-xs text-light/50 mt-2">By Ajay Khanna</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Blog Post 4 -->
+                <a href="https://blog.5eh.co/operational-bottlenecks" target="_blank" rel="noopener noreferrer" class="block">
+                    <div class="blog-card reveal delay-300 bg-charcoal border border-white/5 rounded-sm overflow-hidden h-full flex flex-col hover:border-gold transition-all duration-300">
+                        <div class="bg-darker h-40 flex items-center justify-center border-b border-white/5">
+                            <div class="text-gold font-playfair text-5xl opacity-30">⚙️</div>
+                        </div>
+                        <div class="p-8 flex flex-col justify-between flex-grow">
+                            <div>
+                                <p class="text-gold text-xs uppercase tracking-widest font-semibold mb-3">Operations</p>
+                                <h3 class="text-xl font-playfair text-white mb-4 leading-tight">Identifying Hidden Operational Bottlenecks Before They Destroy Margins</h3>
+                                <p class="text-light/60 font-light text-sm leading-relaxed mb-6">
+                                    The invisible friction points that hemorrhage profitability. Walk through our diagnostic framework for uncovering workflow inefficiencies in kitchen design, service protocols, and inventory systems.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/10 pt-4">
+                                <p class="text-[10px] uppercase tracking-widest text-gold">February 28, 2026 • 9 min read</p>
+                                <p class="text-xs text-light/50 mt-2">By Ajay Khanna</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Blog Post 5 -->
+                <a href="https://blog.5eh.co/concept-validation-framework" target="_blank" rel="noopener noreferrer" class="block">
+                    <div class="blog-card reveal delay-400 bg-charcoal border border-white/5 rounded-sm overflow-hidden h-full flex flex-col hover:border-gold transition-all duration-300">
+                        <div class="bg-darker h-40 flex items-center justify-center border-b border-white/5">
+                            <div class="text-gold font-playfair text-5xl opacity-30">🎯</div>
+                        </div>
+                        <div class="p-8 flex flex-col justify-between flex-grow">
+                            <div>
+                                <p class="text-gold text-xs uppercase tracking-widest font-semibold mb-3">Concept & Strategy</p>
+                                <h3 class="text-xl font-playfair text-white mb-4 leading-tight">Concept Validation: From Visionary Dream to Market Reality</h3>
+                                <p class="text-light/60 font-light text-sm leading-relaxed mb-6">
+                                    Not all restaurant concepts work. This deep dive explores rigorous feasibility analysis, demographic targeting, and competitive positioning frameworks that de-risk ambitious hospitality ventures.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/10 pt-4">
+                                <p class="text-[10px] uppercase tracking-widest text-gold">February 20, 2026 • 11 min read</p>
+                                <p class="text-xs text-light/50 mt-2">By Ajay Khanna</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Blog Post 6 -->
+                <a href="https://blog.5eh.co/luxury-pricing-psychology" target="_blank" rel="noopener noreferrer" class="block">
+                    <div class="blog-card reveal bg-charcoal border border-white/5 rounded-sm overflow-hidden h-full flex flex-col hover:border-gold transition-all duration-300" style="transition-delay: 500ms;">
+                        <div class="bg-darker h-40 flex items-center justify-center border-b border-white/5">
+                            <div class="text-gold font-playfair text-5xl opacity-30">💎</div>
+                        </div>
+                        <div class="p-8 flex flex-col justify-between flex-grow">
+                            <div>
+                                <p class="text-gold text-xs uppercase tracking-widest font-semibold mb-3">Revenue Management</p>
+                                <h3 class="text-xl font-playfair text-white mb-4 leading-tight">The Psychology of Luxury Pricing: Commanding Premium Without Apology</h3>
+                                <p class="text-light/60 font-light text-sm leading-relaxed mb-6">
+                                    Premium pricing isn't about arrogance—it's about alignment. Explore how to strategically position price points that reinforce brand perception and ensure guest satisfaction at luxury price tiers.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/10 pt-4">
+                                <p class="text-[10px] uppercase tracking-widest text-gold">February 12, 2026 • 7 min read</p>
+                                <p class="text-xs text-light/50 mt-2">By Ajay Khanna</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 bg-charcoal px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto reveal">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl md:text-5xl text-white mb-5">More Insights on Our Blog</h2>
+                <p class="text-gold font-light text-xs uppercase tracking-[0.3em]">Strategic · Analytical · Practical</p>
+            </div>
+            <div class="text-center">
+                <a href="https://blog.5eh.co" target="_blank" rel="noopener noreferrer" class="inline-block border border-gold text-gold px-12 py-4 uppercase tracking-widest text-xs font-semibold hover:bg-gold hover:text-charcoal transition-all duration-500">
+                    Explore Full Blog Archive
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-charcoal border-t border-white/5 py-16 px-6 text-center mt-auto">
+        <div class="font-playfair text-gold text-3xl mb-8 cursor-default">5EH.</div>
+        <p class="text-light/40 text-[10px] tracking-[0.2em] uppercase mb-4">5th Element Hospitality © 2026. All Rights Reserved.</p>
+        <p class="text-light/30 text-xs font-light tracking-wide">Amrapali Sapphire, Sector 45, Noida | ajay.khanna@5eh.co.in</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
