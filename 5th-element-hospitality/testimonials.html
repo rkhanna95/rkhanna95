@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall of Love | 5th Element Hospitality</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#1a1a1a',
+                        gold: '#c5a059',
+                        darker: '#111111',
+                        light: '#f5f5f5'
+                    },
+                    fontFamily: {
+                        playfair:,
+                        montserrat: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+        }
+        
+        /* Smooth Scroll Reveal Mechanics */
+       .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.5, 0, 0, 1);
+        }
+       .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+       .delay-100 { transition-delay: 100ms; }
+       .delay-200 { transition-delay: 200ms; }
+       .delay-300 { transition-delay: 300ms; }
+       .delay-400 { transition-delay: 400ms; }
+
+        /* Minimalist Form UI states */
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #c5a059;
+            box-shadow: 0 1px 0 0 #c5a059;
+        }
+    </style>
+</head>
+<body class="font-montserrat antialiased selection:bg-gold selection:text-charcoal flex flex-col min-h-screen">
+
+    <nav class="fixed w-full z-50 top-0 bg-charcoal/95 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex justify-between items-center">
+            <a href="index.html" class="text-gold font-playfair text-2xl font-bold tracking-wider hover:opacity-80 transition-opacity duration-300">5EH.</a>
+            <div class="hidden md:flex space-x-10 text-xs font-medium tracking-widest uppercase text-light/70">
+                <a href="index.html#elements" class="hover:text-gold transition-colors duration-300">The Elements</a>
+                <a href="index.html#founder" class="hover:text-gold transition-colors duration-300">Legacy</a>
+                <a href="index.html#inquiry" class="hover:text-gold transition-colors duration-300">Consultation</a>
+                <a href="elements.html" class="hover:text-gold transition-colors duration-300">Elements</a>
+                <a href="testimonials.html" class="hover:text-gold transition-colors duration-300">Testimonials</a>
+                <a href="insights.html" class="hover:text-gold transition-colors duration-300">Insights</a>
+            </div>
+            <button class="md:hidden text-gold focus:outline-none" aria-label="Toggle Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-16 px-8 md:px-16 text-center reveal">
+        <p class="text-gold tracking-[0.2em] text-xs uppercase font-semibold mb-4">Wall of Love</p>
+        <h1 class="font-playfair text-5xl md:text-6xl text-white mb-6">Partners in Excellence</h1>
+        <p class="font-light text-light/70 max-w-2xl mx-auto">
+            Discreet, transformational results for the world's most ambitious restaurateurs and hoteliers. Do not simply take our word for it—listen to the visionaries we partner with.
+        </p>
+    </header>
+
+    <section class="py-12 border-y border-white/5 bg-darker reveal">
+        <div class="max-w-6xl mx-auto px-8 flex flex-wrap justify-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+            <div class="font-playfair text-2xl tracking-widest uppercase">The Gilded Fork</div>
+            <div class="font-playfair text-2xl tracking-widest uppercase">Azure Bistro</div>
+            <div class="font-playfair text-2xl tracking-widest uppercase">Ember & Ash</div>
+            <div class="font-playfair text-2xl tracking-widest uppercase">Oto Hospitality</div>
+        </div>
+    </section>
+
+    <section class="py-24 px-8 md:px-16 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="reveal">
+                <div class="video-box aspect-video bg-charcoal relative cursor-pointer border border-white/10 group overflow-hidden">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300 z-10"></div>
+                    <div class="play-btn absolute inset-0 flex items-center justify-center z-20 transition-transform duration-300 text-white">
+                        <svg class="w-16 h-16 opacity-80" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                    </div>
+                </div>
+                <div class="pt-6">
+                    <p class="font-playfair text-xl text-gold mb-2">"A 14% reduction in prime costs."</p>
+                    <p class="text-sm font-light text-light/60 uppercase tracking-widest">Executive Chef, The Azure Room</p>
+                </div>
+            </div>
+
+            <div class="reveal delay-100">
+                <div class="video-box aspect-video bg-charcoal relative cursor-pointer border border-white/10 group overflow-hidden">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300 z-10"></div>
+                    <div class="play-btn absolute inset-0 flex items-center justify-center z-20 transition-transform duration-300 text-white">
+                        <svg class="w-16 h-16 opacity-80" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                    </div>
+                </div>
+                <div class="pt-6">
+                    <p class="font-playfair text-xl text-gold mb-2">"They built our operational DNA from scratch."</p>
+                    <p class="text-sm font-light text-light/60 uppercase tracking-widest">Founder, Ember & Ash</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-8 md:px-16 max-w-7xl mx-auto mb-20 bg-darker">
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+            
+            <div class="bg-charcoal p-10 border border-gold/20 reveal">
+                <div class="text-gold text-sm mb-4 tracking-widest">★★★★★</div>
+                <p class="font-light text-light/80 leading-relaxed mb-8 italic">
+                    "Before 5th Element, our turnover rate was bleeding our margins dry. Ajay and his team came in, restructured our entire talent acquisition architecture, and turned our staff into genuine brand ambassadors. Absolute game-changers."
+                </p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="font-playfair text-lg text-white">Marcus V.</p>
+                    <p class="text-[10px] uppercase tracking-widest text-gold mt-1">Director, Oto Hospitality</p>
+                </div>
+            </div>
+
+            <div class="bg-charcoal p-10 border border-gold/20 reveal delay-100">
+                <div class="text-gold text-sm mb-4 tracking-widest">★★★★★</div>
+                <p class="font-light text-light/80 leading-relaxed mb-8 italic">
+                    "The meticulous approach to menu engineering completely shifted our P&L. They didn't just tell us what to cook; they mathematically optimized our offerings to subconscious perfection. A rare blend of culinary art and financial science."
+                </p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="font-playfair text-lg text-white">Elena R.</p>
+                    <p class="text-[10px] uppercase tracking-widest text-gold mt-1">Owner, The Gilded Fork</p>
+                </div>
+            </div>
+
+            <div class="bg-charcoal p-10 border border-gold/20 reveal delay-200">
+                <div class="text-gold text-sm mb-4 tracking-widest">★★★★★</div>
+                <p class="font-light text-light/80 leading-relaxed mb-8 italic">
+                    "Discreet, authoritative, and utterly uncompromising on quality. 5th Element Hospitality bridged the gap between our abstract visionary concept and the brutal physics of daily operations. We achieved ROI projections 8 months ahead of schedule."
+                </p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="font-playfair text-lg text-white">Jonathan S.</p>
+                    <p class="text-[10px] uppercase tracking-widest text-gold mt-1">Developer, Heritage Hotels</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-charcoal border-t border-white/5 py-16 px-6 text-center mt-auto">
+        <div class="font-playfair text-gold text-3xl mb-8 cursor-default">5EH.</div>
+        <p class="text-light/40 text-[10px] tracking-[0.2em] uppercase mb-4">5th Element Hospitality © 2026. All Rights Reserved.</p>
+        <p class="text-light/30 text-xs font-light tracking-wide">Amrapali Sapphire, Sector 45, Noida | ajay.khanna@5eh.co.in</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
