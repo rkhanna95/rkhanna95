@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/5th-element-hospitality/index.html" },
+    { "source": "/(.*)", "destination": "/5th-element-hospitality/$1" }
+  ]
+}
